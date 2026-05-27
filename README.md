@@ -1,18 +1,18 @@
-# EdgeOne Pages Functions: AI OCR
+# Text Count Tool
 
-This project demonstrates how to use a visual recognition large language model within Pages functions to identify text in images. The underlying model is based on Tencent's HunYuan large language model, which can be easily swapped out with other large language models using environment variables.
+This project provides a lightweight text counter that runs entirely in the browser. It helps you quickly understand the length and structure of any text, including detailed breakdowns for English, Chinese (Han), symbols, digits, and whitespace.
 
-## Deploy
+## Features
 
-[![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?from=github&template=functions-ocr)
-
-More Templates: [EdgeOne Pages](https://edgeone.ai/pages/templates)
-
-Live Demo: https://functions-ocr.edgeone.app
+- Real-time counts: total, English, Chinese, symbols
+- Detailed breakdown: digits, whitespace, other symbols, unique characters
+- Structure stats: English words, lines, paragraphs
+- UTF-8 byte size estimate
+- Local-only processing with auto-save and one-click copy
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -30,15 +30,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Counting Rules
 
-To learn more about Next.js, take a look at the following resources:
+- English: A–Z / a–z only
+- Chinese: Unicode Han characters only
+- Symbols: everything else (digits, whitespace, punctuation, emoji, etc.)
+
+## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Credit
-
-This project was inspired by [llama-ocr](https://github.com/Nutlope/llama-ocr). Go check them out!

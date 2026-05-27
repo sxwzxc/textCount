@@ -1,14 +1,18 @@
-# EdgeOne Pages 函数：AI OCR
+# 字符统计工具
 
-该项目展示了如何在 Pages 函数中使用视觉识别大语言模型来识别图像中的文本。基础模型基于腾讯的 HunYuan 大语言模型，可以通过环境变量轻松替换为其他大语言模型。
+这是一个轻量级的字符统计页面，所有计算都在浏览器本地完成，用于快速获取文本长度与结构信息。
 
-## 部署
+## 功能亮点
 
-[![使用 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://console.cloud.tencent.com/edgeone/pages/new?from=github&template=functions-ocr)
+- 实时统计：总字符、英文、中文、符号
+- 细分统计：数字、空白、其他符号、唯一字符数
+- 结构统计：英文单词、行数、段落数
+- UTF-8 字节估算
+- 本地自动保存 + 一键复制统计结果
 
 ## 入门
 
-首先，运行开发服务器：
+运行开发服务器：
 
 ```bash
 npm run dev
@@ -26,11 +30,13 @@ bun dev
 
 该项目使用 [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) 自动优化和加载 Inter，这是一种自定义的 Google 字体。
 
-## 了解更多
+## 统计规则
 
-要了解有关 Next.js 的更多信息，请查看以下资源：
+- 英文：仅统计 A–Z / a–z
+- 中文：仅统计汉字（Unicode Han）
+- 符号：除英文与中文外的所有字符（含数字、空白、标点、emoji 等）
+
+## 了解更多
 
 - [Next.js 文档](https://nextjs.org/docs) - 了解 Next.js 的功能和 API。
 - [学习 Next.js](https://nextjs.org/learn) - 一个互动的 Next.js 教程。
-
-您可以查看 [Next.js GitHub 仓库](https://github.com/vercel/next.js/) - 欢迎您的反馈和贡献！
