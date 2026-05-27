@@ -1,9 +1,9 @@
-import { OCR } from '@/components/OCR';
+import { TextCount } from '@/components/TextCount';
 
 export default function Home() {
   return (
     <main>
-      <OCR />
+      <TextCount />
     </main>
   );
 }
