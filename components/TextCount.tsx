@@ -111,8 +111,8 @@ const buildCounts = (text: string): CountResult => {
   };
 };
 
-const formatNumber = (value: number) =>
-  new Intl.NumberFormat('zh-CN').format(value);
+const numberFormatter = new Intl.NumberFormat('zh-CN');
+const formatNumber = (value: number) => numberFormatter.format(value);
 
 const StatCard = ({
   title,
